@@ -1,7 +1,345 @@
-#home{
+#home {
     position: relative;
-    height: 150vh;
+    min-height: 150vh;
     z-index: 1;
-    background-color: black;
+    font-family: $font-family-bebas-neue;
+
+    #firstPage {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 25px;
+        // background-color: rgb(0, 0, 133);
+
+        .content {
+            z-index: 2;
+        }
+    }
+    #secondPage {
+        min-height: 100vh;
+        position: relative;
+
+        background-color: blue;
+        padding-top: 400px;
+        font-size: 100px;
+    }
+    #thirdPage {
+    }
+
+    /* ----- BLOB ----- */
+    .blob {
+        position: relative;
+        margin: 120px auto 50px auto;
+        z-index: 3;
+        background: rgba(29, 236, 255, 1);
+        width: 250px;
+        height: 250px;
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        overflow: hidden;
+        animation: morph 3s linear infinite, blob-appear 2s ease-in-out 1;
+        visibility: hidden;
+        &:hover {
+            animation: morph-hover 4s linear infinite, blob-appear 0s ease-in-out 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    /* ----- REVEAL TEXT ----- */
+    .reveal-text {
+        position: relative;
+        animation: clip-text 2s cubic-bezier(0, 0, 0.2, 1) 1;
+        color: #fff;
+        height: auto;
+        display: block;
+        width: 80%;
+        margin: auto;
+        z-index: 2;
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ffffff;
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            pointer-events: none;
+            animation: text-revealer 2s cubic-bezier(0, 0, 0.2, 1) 1;
+        }
+
+        h1 {
+            color: $white;
+            text-align: justify;
+            text-transform: uppercase;
+            position: relative;
+        }
+    }
+
+    /* ----- TEXT DARK GREY IN BACKGROUND ----- */
+    .text-background {
+        z-index: 1;
+
+        p {
+            color: #1e1e1e;
+            font-weight: bold;
+            font-size: 100px;
+            // text-shadow: 2px 2px 6px #3b3b3b;
+        }
+    }
+    #text-background-react {
+        position: absolute;
+        bottom: 40vh;
+        left: 0;
+    }
+    #text-background-symfony {
+        position: absolute;
+        bottom: 20vh;
+        right: 0;
+    }
+
+    /* ----- WAVES BACKGROUND ----- */
+    .waves {
+        position: fixed;
+        z-index: 4;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        margin-bottom: -7px; /*Fix for safari gap*/
+        min-height: 100px;
+        max-height: 150px;
+        .parallax {
+            use {
+                animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+                &:nth-child(1) {
+                    animation-delay: -2s;
+                    animation-duration: 7s;
+                }
+                &:nth-child(2) {
+                    animation-delay: -3s;
+                    animation-duration: 10s;
+                }
+                &:nth-child(3) {
+                    animation-delay: -4s;
+                    animation-duration: 13s;
+                }
+                &:nth-child(4) {
+                    animation-delay: -5s;
+                    animation-duration: 20s;
+                }
+            }
+        }
+    }
 }
 
+/* ----- BLOB ANIMATION ----- */
+@keyframes morph {
+    0%,
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    34% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+}
+@keyframes morph-hover {
+    0% {
+        background: rgba(29, 236, 255, 1);
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+        transform: translate(0, 0);
+    }
+    16.6% {
+        transform: translate(0, 5px);
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+        background: rgb(29, 157, 255);
+    }
+    33.6% {
+        transform: translate(0, 0);
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+    50.2% {
+        transform: translate(0, 5px);
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+        background: rgb(112, 29, 255);
+    }
+    66.8% {
+        transform: translate(0, 0);
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    83.4% {
+        transform: translate(0, 5px);
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+    100% {
+        transform: translate(0, 0);
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+        background: rgba(29, 236, 255, 1);
+    }
+}
+
+@keyframes blob-appear {
+    0% {
+        scale: 0;
+        transform: translate(50vw, -50vh);
+    }
+    70% {
+        scale: 0.5;
+    }
+    100% {
+        scale: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* ----- TEXT REVEAL ANIMATION ----- */
+@keyframes clip-text {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes text-revealer {
+    0%,
+    50% {
+        transform-origin: 0 50%;
+    }
+
+    60%,
+    100% {
+        transform-origin: 100% 50%;
+    }
+
+    60% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+/* ----- END TEXT REVEAL ANIMATION ----- */
+
+/* ----- WAVES ANIMATION ----- */
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+/* ----- END WAVES ANIMATION ----- */
+
+/* ----- MEDIA QUERY ----- */
+@include sm {
+    #home {
+        .blob {
+            width: 350px;
+            height: 350px;
+        }
+
+        /* ----- REVEAL TEXT ----- */
+        .reveal-text {
+            width: 60%;
+            h1 {
+                font-size: 36px;
+            }
+        }
+        /* ----- TEXT DARK GREY IN BACKGROUND ----- */
+        .text-background p {
+            font-size: 125px;
+        }
+        #text-background-react {
+            bottom: 50vh;
+        }
+        #text-background-symfony {
+            bottom: 20vh;
+        }
+    }
+}
+@include md {
+    #home {
+        /* ----- REVEAL TEXT ----- */
+        .reveal-text {
+            width: 50%;
+        }
+
+        /* ----- TEXT DARK GREY IN BACKGROUND ----- */
+        .text-background p {
+            font-size: 150px;
+        }
+    }
+}
+
+@include lg {
+    #home {
+        #firstPage {
+            .content {
+                max-height: 100vh;
+                display: flex;
+                flex-direction: row-reverse;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        #secondPage {
+            max-height: 100vh;
+        }
+
+        .blob {
+            margin: auto;
+        }
+
+        /* ----- REVEAL TEXT ----- */
+        .reveal-text {
+            width: 50%;
+            h1 {
+                font-size: 40px;
+            }
+        }
+        /* ----- TEXT DARK GREY IN BACKGROUND ----- */
+        .text-background p {
+            font-size: 200px;
+        }
+        #text-background-react {
+            bottom: 40vh;
+        }
+        #text-background-symfony {
+            bottom: 10vh;
+        }
+    }
+}
+
+@include xl {
+    #home {
+        #firstPage {
+            /* ----- REVEAL TEXT ----- */
+            .reveal-text {
+                h1 {
+                    font-size: 50px;
+                }
+            }
+            #text-background-react {
+                top: 10vh;
+                bottom: unset;
+            }
+            #text-background-symfony {
+                bottom: 1vh;
+            }
+        }
+    }
+}

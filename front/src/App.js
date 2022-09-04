@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Style
+// ----- Style -----
 import './styles/App.scss';
 
-// Components
+// ----- Components -----
 import LocationUrl from './components/tools/Location'
 import Header from './components/sections/Header'
 import Footer from './components/sections/Footer'
 
-// Tools Components
+// ----- Tools Components -----
 import Loader from './components/tools/Loader'
 import Cursor from './components/tools/Cursor'
 
-// Pages
+// ----- Pages -----
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
@@ -28,7 +28,7 @@ export default function App() {
     setTimeout(() => {
       setLoaded(true)
 
-    }, 5000);
+    }, 1000);
     // eslint-disable-next-line
   }, [])
 

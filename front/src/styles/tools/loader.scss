@@ -140,6 +140,7 @@ $shadowTwo: #ffffff36;
 }
 
 #loader {
+
   #hole {
     position: absolute;
     max-height: 100vh;
@@ -192,7 +193,7 @@ $shadowTwo: #ffffff36;
 
   .title-loader {
     font-family: $font-family-bebas-neue;
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: $white;
     position: absolute;
     opacity: 0;
@@ -219,18 +220,18 @@ $shadowTwo: #ffffff36;
 @include sm {
   #loader {
     .title-loader {
-      font-size: 6rem;
+      font-size: 5rem;
     }
   }
 }
 
-@include md {
-  #loader {
-    .title-loader {
-      font-size: 8rem;
-    }
-  }
-}
+// @include md {
+//   #loader {
+//     .title-loader {
+//       font-size: 6.5rem;
+//     }
+//   }
+// }
 
 @include sm-landscape {
   #loader {
@@ -240,6 +241,11 @@ $shadowTwo: #ffffff36;
   }
 }
 @include lg {
+  #loader {
+    .title-loader {
+      font-size: 7.5rem;
+    }
+  }
 }
 
 @include xl {

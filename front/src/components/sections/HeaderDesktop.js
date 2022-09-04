@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 // Images
-import Logo from "../../images/ellipse.png"
+import Logo from "../../images/logo.png"
 
 // Packages 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import gsap, { Bounce } from "gsap"
+import gsap from "gsap"
 
 
 export default function HeaderDesktop() {
@@ -17,33 +17,33 @@ export default function HeaderDesktop() {
     const [scrollTop, setScrollTop] = useState("")
     const [lastScrollTop, setLastScrollTop] = useState('')
 
-    // ----- Get The NavBar -----
+    /* ----- Get The NavBar ----- */
     const navbar = document.getElementById('headerDesktop'); 
 
-    // ----- On every scroll this funtion will be called -----
+    /* ----- On every scroll this funtion will be called ----- */
     window.addEventListener('scroll', function () {
 
-        // -----This line will get the location on scroll -----
+        /* ----- This line will get the location on scroll ----- */
         setScrollTop(window.pageYOffset || document.documentElement.scrollTop)
 
 
-        // ----- If it will be greater than the previous -----
+        /* ----- If it will be greater than the previous ----- */
         if (scrollTop > lastScrollTop) {
             setShow(false)
         } else {
             setShow(true)
         }
 
-        // ----- New Position Stored -----
+        /* ----- New Position Stored ----- */
         setLastScrollTop(scrollTop)
     });
 
 
     useEffect(() => {
         if (show) {
-            gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: Bounce });
+            gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: 'ease-in-out' });
         } else {
-            gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: Bounce });
+            gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: 'ease-in-out' });
         }
         // eslint-disable-next-line
     }, [show])
@@ -59,7 +59,7 @@ export default function HeaderDesktop() {
         <div id="headerDesktop">
             <nav className="navbar navbar-expand-xl">
 
-                {/* Logo */}
+                {/* ----- Logo ----- */}
                 <Link className="navbar-brand" to="/">
                     <LazyLoadImage
                         alt={"Aliz Logo"}

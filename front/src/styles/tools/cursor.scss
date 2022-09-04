@@ -32,7 +32,7 @@
 .cursor-dot,
 .cursor-dot-outline {
     display: none;
-    z-index: 10;
+    z-index: 5;
     pointer-events: none;
     position: absolute;
     top: 50%;
@@ -56,13 +56,12 @@
     height: 50px;
     mix-blend-mode: difference;
     pointer-events: none;
-    z-index: 1;
     transition: 0.15s linear;
     animation: blobRadius 5s ease infinite, blobBackground 15s ease infinite;
 }
 
 /* ----- Media query ----- */
-@include md {
+@include lg {
     .cursor-dot,
     .cursor-dot-outline {
         display: block;
