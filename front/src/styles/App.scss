@@ -15,6 +15,7 @@
 
 // Pages
 @import "./pages/home.scss";
+@import "./pages/myProject.scss";
 @import "./pages/notFound.scss";
 
 body {
@@ -28,6 +29,9 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth !important;
+    font-family: $font-family-bebas-neue;
+
 }
 
 code {

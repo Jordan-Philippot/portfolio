@@ -1,0 +1,219 @@
+#myProject {
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    background-color: black;
+    color: $white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+
+    .blob-container {
+        z-index: 3;
+        background-color: rgb(255, 255, 255);
+        // box-shadow: 0 0 50px 5px white;
+        border-radius: 50%;
+        margin-top: -6px;
+        margin-left: -5px;
+        position: relative;
+
+        &:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            transform-origin: 50px 50px;
+            transform: rotate(50px);
+            animation: rotate 3.5s ease-in-out infinite;
+            filter: blur(3px);
+        }
+
+        &:before {
+            position: relative;
+            display: block;
+            content: "";
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            transform-origin: 30px 30px;
+            transform: rotate(300px);
+            animation: rotate 3.5s ease-in-out 2s infinite;
+            filter: blur(3px);
+        }
+    }
+
+    #blob {
+        position: absolute;
+        overflow: hidden !important;
+        z-index: 1;
+        background: #4478ff;
+        top: 70vh;
+        right: -30%;
+        width: 100vw;
+        height: 100vw;
+        border-radius: 50%;
+    }
+    // ----- Images animations -----
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        grid-template-rows: repeat(3, 90px);
+        width: 360px;
+        grid-gap: 0.5rem;
+        .image {
+            position: relative;
+            padding-bottom: 100%;
+            --clip-start: circle(0);
+            --clip-end: circle(125%);
+
+            &:hover,
+            &:focus,
+            &:active {
+                img:nth-of-type(2) {
+                    -webkit-clip-path: var(--clip-end);
+                    clip-path: var(--clip-end);
+                    transform: scale(1.6);
+                    z-index: 4;
+                }
+            }
+
+            img {
+                height: auto;
+                width: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                left: 0;
+                position: absolute;
+                top: 0;
+                border-radius: 6px;
+
+                &:nth-of-type(1) {
+                    filter: brightness(70%);
+                }
+                &:nth-of-type(2) {
+                    -webkit-clip-path: var(--clip-start);
+                    clip-path: var(--clip-start);
+                    transition: -webkit-clip-path 0.5s;
+                    transition: clip-path 0.5s;
+                    transition: clip-path 0.5s, -webkit-clip-path 0.5s, transform 1s ease-in-out 1;
+                }
+            }
+        }
+    }
+
+    .projectInfo-container {
+        width: 90%;
+        text-align: left;
+        z-index: 2;
+
+        .projectInfo-header {
+            display: flex;
+            margin: 25px 0;
+            img {
+                width: auto;
+                height: 70px;
+                margin: auto 0;
+            }
+            h1 {
+                font-size: 70px;
+                margin: auto 0 auto 25px;
+            }
+        }
+        .projectInfo-description {
+            h3 {
+                color: $blue;
+                font-weight: bold;
+                font-size: 26px;
+            }
+            p {
+                font-size: 18px;
+                margin-bottom: 25px;
+                &:nth-child(1) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* ----- MEDIA QUERY ----- */
+@include sm {
+    #myProject {
+        .projectInfo-container {
+            width: 70%;
+
+            #blob {
+                bottom: -25vw;
+            }
+
+            .projectInfo-header {
+                img {
+                    height: 100px;
+                }
+                h1 {
+                    font-size: 100px;
+                }
+            }
+            .projectInfo-description {
+                p {
+                    font-size: 20px;
+                    &:nth-child(1) {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include md {
+    #myProject {
+        // ----- Images animations -----
+        .image-container {
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: repeat(3, 100px);
+            width: 400px;
+        }
+    }
+}
+
+@include lg {
+    #myProject {
+        // ----- Images animations -----
+        .image-container {
+            grid-template-columns: repeat(2, 220px);
+            grid-template-rows: repeat(3, 110px);
+            width: 440px;
+        }
+    }
+}
+
+@include xl {
+    #myProject {
+        flex-direction: row;
+        padding-top: 0;
+        #blob {
+            top: -10%;
+            right: -25%;
+            width: 50vw;
+            height: 50vw;
+        }
+        // ----- Images animations -----
+        .image-container {
+            grid-template-columns: repeat(2, 300px);
+            grid-template-rows: repeat(3, 150px);
+            width: 600px;
+        }
+
+        .projectInfo-container {
+            margin-left: 5vw;
+            width: 40%;
+        }
+    }
+}

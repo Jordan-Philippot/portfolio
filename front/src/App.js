@@ -15,11 +15,15 @@ import Cursor from './components/tools/Cursor'
 
 // ----- Pages -----
 import Home from './pages/Home'
+import MyProject from './pages/MyProject'
 import NotFound from './pages/NotFound'
 
 
 export default function App() {
+
+  // eslint-disable-next-line
   const [location, setLocation] = useState('')
+
   const [loaded, setLoaded] = useState(false)
 
 
@@ -54,6 +58,9 @@ export default function App() {
 
             {/* ----- Homepage ----- */}
             <Route exact path="/" element={<Home />} />
+
+            {/* ----- My Project ----- */}
+            <Route exact path="/project/:id" element={<MyProject />} />
 
           </Routes>
 

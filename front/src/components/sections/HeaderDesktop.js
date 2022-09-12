@@ -75,7 +75,7 @@ export default function HeaderDesktop() {
                         </li>
 
                         <li className="nav-item">
-                            <Link to={"/#works"}>Projets</Link>
+                            <Link to={"/#projectsList"}>Projets</Link>
                         </li>
 
                         <li className="nav-item">
