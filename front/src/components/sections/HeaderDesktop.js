@@ -18,7 +18,7 @@ export default function HeaderDesktop() {
     const [lastScrollTop, setLastScrollTop] = useState('')
 
     /* ----- Get The NavBar ----- */
-    const navbar = document.getElementById('headerDesktop'); 
+    const navbar = document.getElementById('headerDesktop');
 
     /* ----- On every scroll this funtion will be called ----- */
     window.addEventListener('scroll', function () {
@@ -50,6 +50,7 @@ export default function HeaderDesktop() {
 
     useEffect(() => {
         setShow(true)
+
     }, [])
 
 
@@ -70,12 +71,17 @@ export default function HeaderDesktop() {
                 <div className="collapse navbar-collapse">
                     {/* ----- Nav right ----- */}
                     <ul className="navbar-nav">
+                        
+                        <li className="nav-item">
+                            <Link to={"/#firstPage"}>Accueil</Link>
+                        </li>
+
                         <li className="nav-item">
                             <Link to={"/#about"}>À propos</Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to={"/#projectsList"}>Projets</Link>
+                            <a href={"/#projectsList"}>Projets</a>
                         </li>
 
                         <li className="nav-item">

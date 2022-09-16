@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
 
 // ----- Components -----
-import FirstBlock from '../components/FirstBlock';
-import SecondBlock from '../components/SecondBlock';
-import ThirdBlock from '../components/ThirdBlock';
+import FirstBlock from '../components/firstBlock/FirstBlock';
+import SecondBlock from '../components/secondBlock/SecondBlock';
+import ThirdBlock from '../components/thirdBlock/ThirdBlock';
 
 import Waves from '../components/Waves';
 

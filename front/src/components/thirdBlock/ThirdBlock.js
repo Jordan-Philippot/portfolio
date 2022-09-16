@@ -4,7 +4,7 @@ export default function ThirdBlock({ thirdBlockRef }) {
     return (
         <div id="thirdPage" className="container-fluid" ref={thirdBlockRef}>
 
-            <p className="m-auto"> Okkkkkkk</p>
+            <h2>À propos</h2>
         </div>
     )
 }

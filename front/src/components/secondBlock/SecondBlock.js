@@ -4,7 +4,7 @@ import React from 'react'
 import OneProject from './OneProject'
 
 // ----- Services -----
-import { myProjects } from '../services/constants/projects'
+import { myProjects } from '../../services/constants/projects'
 
 export default function SecondBlock({ secondBlockRef }) {
 

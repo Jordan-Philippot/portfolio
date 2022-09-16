@@ -6,7 +6,7 @@
     color: $black;
     font-size: 120px;
     overflow-x: hidden;
-
+    margin-bottom: 150px;
     #blob1 {
         position: absolute;
         top: 0;
@@ -52,6 +52,7 @@
 
         .oneProject {
             position: relative;
+            cursor: pointer;
 
             &:nth-child(1) {
                 .hoverContainer {

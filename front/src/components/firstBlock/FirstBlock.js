@@ -1,7 +1,7 @@
 import React from 'react'
 
 // ----- Images ----- 
-import Profile from '../images/AvatarMaker.png'
+import Profile from '../../images/AvatarMaker.png'
 
 export default function FirstBlock({ firstBlockRef }) {
     return (

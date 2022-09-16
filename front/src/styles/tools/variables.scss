@@ -9,6 +9,7 @@ $white: #ffffff;
 /* ----- Colors ----- */
 $turquoise: #b6f6ff;
 $lightblue: rgb(125, 171, 255);
+$darkblue: #4478ff;
 $yellow: #ffcf59;
 $orange: #ff9900;
 $blue: #5a8aff;
@@ -34,6 +35,9 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1200px;
+
+// Large tablets and desktops
+$screen-xxl-min: 1500px;
 
 // Smartphone
 @mixin sm {
@@ -65,6 +69,13 @@ $screen-xl-min: 1200px;
 // Extra large devices
 @mixin xl {
     @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// Xxl devices
+@mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
         @content;
     }
 }
