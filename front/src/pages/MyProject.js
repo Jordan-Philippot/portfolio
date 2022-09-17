@@ -99,7 +99,7 @@ export default function MyProject() {
                 <div id="blob"></div>
 
                 <div className="blob-container">
-                    <div className="image-container">
+                    <div className={`image-container ${myProject.isMediaDesktop ? 'container-desktop' : 'container-mobile'} `}>
                         {myProject?.images && myProject.images.map((image, index) =>
                             <div className="image" key={index}>
                                 <img alt={image.alt} src={image.src} />

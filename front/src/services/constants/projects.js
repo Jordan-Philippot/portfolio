@@ -11,6 +11,7 @@ export const myProjects = [
         other: "Tâches cron | Listener | Webhook | Connexion Gmail & Outlook | Google Analitycs | OVH | FileZilla",
         logo: require('../../images/projects/aliz/logoAliz.png'),
         link: "https://aliz.io",
+        isMediaDesktop: true,
         images: [
             {
                 src: require('../../images/projects/aliz/aliz.png'),
@@ -50,6 +51,7 @@ export const myProjects = [
         other: "Tâches cron | Listener | Webhook ",
         logo: require('../../images/projects/aliz/logoAliz.png'),
         link: "https://calendar.aliz.io",
+        isMediaDesktop: true,
         images: [
             {
                 src: require('../../images/projects/alizCalendar/defaultHomeAlizCalendar.png'),
@@ -89,6 +91,7 @@ export const myProjects = [
         other: "Webhook | Axios",
         logo: require('../../images/projects/aliz/logoAliz.png'),
         link: "https://verif.aliz.io",
+        isMediaDesktop: true,
         images: [
             {
                 src: require('../../images/projects/alizVerif/alizVerif.png'),
@@ -130,6 +133,7 @@ export const myProjects = [
         other: "Google Maps | filtre de recherche avancés | api .gouv | Axios",
         logo: require('../../images/projects/studhelp/logoStudhelp.png'),
         link: "",
+        isMediaDesktop: true,
         images: [
             {
                 src: require('../../images/projects/alizVerif/alizVerif.png'),
@@ -170,31 +174,32 @@ export const myProjects = [
         other: "api betaseries | Axios",
         logo: require('../../images/projects/netflix/logoNetflix.png'),
         link: "",
+        isMediaDesktop: false,
         images: [
             {
-                src: require('../../images/projects/alizVerif/alizVerif.png'),
+                src: require('../../images/projects/netflix/homeNetflix.png'),
                 alt: "Accueil du site https://verif.aliz.io",
             },
             {
-                src: require('../../images/projects/alizVerif/multipleSearchAlizVerif.png'),
+                src: require('../../images/projects/netflix/detailsActorNetflix.png'),
                 alt: "Page de recherche multiple de données d'entreprises",
             },
             {
-                src: require('../../images/projects/alizVerif/ourServicesAlizVerif.png'),
+                src: require('../../images/projects/netflix/detailsSearchNetflix.png'),
                 alt: "Page des différents services d'AlizVerif",
             },
-            {
-                src: require('../../images/projects/alizVerif/pricesAlizVerif.png'),
-                alt: "Page des tarifs d'AlizVerif",
-            },
-            {
-                src: require('../../images/projects/alizVerif/verifDataAlizVerif.png'),
-                alt: "Page de vérification et nettoyage des données légales d'entreprises",
-            },
-            {
-                src: require('../../images/projects/alizVerif/resultsAlizVerif.png'),
-                alt: "Page de vérification et nettoyage des données légales d'entreprises",
-            },
+            // {
+            //     src: require('../../images/projects/netflix/detailsActorNetflix.png'),
+            //     alt: "Page des tarifs d'AlizVerif",
+            // },
+            // {
+            //     src: require('../../images/projects/netflix/detailsEpisodesNetflix.png'),
+            //     alt: "Page de vérification et nettoyage des données légales d'entreprises",
+            // },
+            // {
+            //     src: require('../../images/projects/netflix/detailsEpisodesNetflix.png'),
+            //     alt: "Page de vérification et nettoyage des données légales d'entreprises",
+            // },
         ]
 
     },
@@ -210,6 +215,8 @@ export const myProjects = [
         other: "",
         logo: require('../../images/projects/netflix/logoNetflix.png'),
         link: "",
+        isMediaDesktop: true,
+
         images: [
             {
                 src: require('../../images/projects/alizVerif/alizVerif.png'),
