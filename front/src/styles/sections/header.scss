@@ -34,9 +34,12 @@
                 margin-left: 3vw;
                 font-size: 26px;
                 cursor: pointer;
-                &:hover {
-                    font-weight: bold;
+                a{
+                    &:hover {
+                        color: $darkblue;
+                    }
                 }
+               
             }
         }
     }

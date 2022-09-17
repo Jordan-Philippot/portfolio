@@ -1,13 +1,124 @@
-#thirdBlock {
+#about {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 100px;
+    color: white;
+
+    background-color: black;
+    overflow-x: hidden;
+    h2 {
+        text-align: right;
+    }
+    // .roundedBackground {
+    //     width: 100vw;
+    //     height: auto;
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0;
+    //     z-index: 1;
+    //     overflow: hidden;
+    //     background-repeat: no-repeat;
+    // }
+    .container-about {
+        z-index: 3;
+        position: relative;
+        width: 80vw;
+        margin: 100px auto;
+        #about-presentation {
+            font-size: 20px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        }
+
+        #about-description {
+            display: flex;
+            flex-direction: column;
+
+            font-size: 20px;
+
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+            .skills,
+            .langage {
+                margin-top: 50px;
+                width: 100%;
+                h3 {
+                    color: rgb(219, 219, 219);
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        p {
+            text-align: left;
+        }
+
+        .hr-dotted {
+            width: 100%;
+            height: 7px;
+            background: linear-gradient(to right, rgb(255, 255, 255) 33%, rgb(0, 0, 0) 0%) top/10px 1px repeat-x; /* top */
+            margin-top: 25px;
+        }
+    }
 }
 
 /* ----- MEDIA QUERY ----- */
 @include sm {
 }
 @include md {
+    #about {
+        .container-about {
+            #about-description {
+                .skills,
+                .langage {
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        p {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include lg {
+    #about {
+        .container-about {
+            width: 70vw;
+            #about-presentation {
+                font-size: 24px;
+            }
+
+            #about-description {
+                flex-direction: row;
+                font-size: 18px;
+
+                .skills,
+                .langage {
+                    padding-right: 15px;
+                    width: 50%;
+                    div {
+                        display: block;
+                        justify-content: unset;
+                        flex-wrap: nowrap;
+                        p {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include xl {

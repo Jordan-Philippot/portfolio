@@ -1,4 +1,5 @@
 import React from 'react'
+// import {Link} from 'react-router-dom'
 
 // ----- Images ----- 
 import Profile from '../../images/AvatarMaker.png'
@@ -6,7 +7,7 @@ import Profile from '../../images/AvatarMaker.png'
 export default function FirstBlock({ firstBlockRef }) {
     return (
 
-        <section id="firstPage" className="container-fluid" ref={firstBlockRef} >
+        <section id="home" className="container-fluid" ref={firstBlockRef} >
 
             <div className="content">
                 <div className="blob"><img src={Profile} alt="profile" /></div>
@@ -14,13 +15,9 @@ export default function FirstBlock({ firstBlockRef }) {
 
                 <div className="reveal-text">
                     <h1>
-                        HELLO! I am Jordan Philippot,
-                        titulated of web
-                        developer - integrator
-                        at Epitech, web
-                        application CONCEPTOR
-                        at INSTIC AND DEVELOPER
-                        FULLSTACK
+                        Salut! Je suis Jordan Philippot,
+                        titulaire d'un titre de développeur - intégrateur web à Epitech,
+                        concepteur d'applications web à INSTIC et développeur Fullstack.
                     </h1>
                 </div>
             </div>
@@ -31,6 +28,7 @@ export default function FirstBlock({ firstBlockRef }) {
                 <p id="text-background-react">REACT</p>
                 <p id="text-background-symfony">SYMFONY</p>
             </div>
+
 
         </section >
     )

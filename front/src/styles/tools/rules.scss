@@ -23,14 +23,13 @@ img {
     cursor: pointer;
 }
 
-iframe {
-    height: 450px;
-    width: 800px;
-    margin-top: 50px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 12px #5887ff1f;
-}
 
+h2 {
+    font-size: 80px;
+    color: rgb(230, 230, 230);
+    position: relative;
+    z-index: 3;
+}
 /* ----- Media query ----- */
 @include sm {
     .min-sm-flex-direction-column-reverse {
@@ -38,6 +37,9 @@ iframe {
     }
     .min-sm-flex-direction-column {
         flex-direction: column;
+    }
+    h2 {
+        font-size: 100px;
     }
 }
 
@@ -47,6 +49,9 @@ iframe {
     }
     .min-md-flex-direction-column {
         flex-direction: column;
+    }
+    h2 {
+        font-size: 120px;
     }
 }
 
@@ -59,6 +64,9 @@ iframe {
     }
     .min-lg-flex-direction-column {
         flex-direction: column;
+    }
+    h2 {
+        font-size: 150px;
     }
 }
 

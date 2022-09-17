@@ -73,7 +73,7 @@ export default function HeaderDesktop() {
                     <ul className="navbar-nav">
                         
                         <li className="nav-item">
-                            <Link to={"/#firstPage"}>Accueil</Link>
+                            <Link to={"/#home"}>Accueil</Link>
                         </li>
 
                         <li className="nav-item">
@@ -81,7 +81,7 @@ export default function HeaderDesktop() {
                         </li>
 
                         <li className="nav-item">
-                            <a href={"/#projectsList"}>Projets</a>
+                            <a href={"/#projects"}>Projets</a>
                         </li>
 
                         <li className="nav-item">

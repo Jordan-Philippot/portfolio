@@ -1,7 +1,8 @@
-#firstPage {
+#home {
     min-height: 100vh;
     position: relative;
     padding-bottom: 25px;
+    padding-top: 150px;
 
     .content {
         z-index: 2;
@@ -58,6 +59,10 @@
             text-align: justify;
             position: relative;
         }
+        button {
+            margin: 15px 0;
+            display: block;
+        }
     }
 
     /* ----- TEXT DARK GREY IN BACKGROUND ----- */
@@ -79,6 +84,10 @@
         position: absolute;
         bottom: 20vh;
         right: 0;
+    }
+
+    svg{
+        display: none;
     }
 }
 /* ----- BLOB ANIMATION ----- */
@@ -176,7 +185,7 @@
 
 /* ----- MEDIA QUERY ----- */
 @include sm {
-    #firstPage {
+    #home {
         .blob {
             width: 350px;
             height: 350px;
@@ -202,7 +211,7 @@
     }
 }
 @include md {
-    #firstPage {
+    #home {
         /* ----- REVEAL TEXT ----- */
         .reveal-text {
             width: 50%;
@@ -216,7 +225,7 @@
 }
 
 @include lg {
-    #firstPage {
+    #home {
         .content {
             max-height: 100vh;
             display: flex;
@@ -249,11 +258,20 @@
         #text-background-symfony {
             bottom: 10vh;
         }
+
+        svg{
+            display: block;
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
 
 @include xl {
-    #firstPage {
+    #home {
         /* ----- REVEAL TEXT ----- */
         .reveal-text {
             h1 {

@@ -41,7 +41,6 @@ export default function MyProject() {
     useEffect(() => {
         if (typeof myProject !== "undefined" && Object.keys(myProject).length > 0) {
             setHaveProject(true)
-
         } else {
             setHaveProject(false)
         }
@@ -125,7 +124,7 @@ export default function MyProject() {
                             <p ref={thirdDescriptionProjectRef}>{myProject?.tools}</p>
                             <h3 ref={thirdTitleDescriptionProjectRef}>En vrac:</h3>
                             <p ref={fourDescriptionProjectRef}>{myProject?.other}</p>
-                            <a ref={linkProjectRef} href={myProject?.link} target="_blank" rel="noopener noreferrer">Visiter le site</a>
+                            <a ref={linkProjectRef} href={myProject?.link} target="_blank" rel="noopener noreferrer" className="btn-darkBlue">Visiter le site</a>
                         </div>
 
                     </div>

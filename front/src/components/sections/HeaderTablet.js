@@ -26,7 +26,7 @@ export default function HeaderTablet() {
 
   useEffect(() => {
     if (!nav) {
-      gsap.to('#navbarNavDropdown', { display: 'none', opacity: 0, duration: 0.8});
+      gsap.to('#navbarNavDropdown', { display: 'none', opacity: 0, duration: 0.8 });
     } else {
       gsap.to('#navbarNavDropdown', { display: 'block', opacity: 1, duration: 0.8 });
     }
@@ -85,8 +85,10 @@ export default function HeaderTablet() {
             <div className="dropdown-divider"></div>
 
             <li className="nav-item">
-              <Link to="/#firstPage">Accueil</Link>
+              <Link to="/#home">Accueil</Link>
             </li>
+
+            <div className="dropdown-divider" id="assistant-hr"></div>
 
             <li className="nav-item">
               <Link to="/#about">À propos</Link>
@@ -95,7 +97,7 @@ export default function HeaderTablet() {
             <div className="dropdown-divider" id="assistant-hr"></div>
 
             <li className="nav-item">
-              <Link to="/#projectsList">Projets</Link>
+              <Link to="/#projects">Projets</Link>
             </li>
 
             <div className="dropdown-divider"></div>

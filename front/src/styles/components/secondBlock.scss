@@ -1,12 +1,11 @@
-#secondPage {
+#projects {
     min-height: 100vh;
     height: auto;
     position: relative;
     background-color: black;
-    color: $black;
     font-size: 120px;
     overflow-x: hidden;
-    margin-bottom: 150px;
+
     #blob1 {
         position: absolute;
         top: 0;
@@ -37,11 +36,7 @@
     h2 {
         padding-top: 50px;
         margin-bottom: 50px;
-        font-size: 80px;
-        color: rgb(230, 230, 230);
-        position: relative;
         text-align: left;
-        z-index: 3;
     }
 
     #projectsList {
@@ -49,9 +44,10 @@
         text-align: center;
         display: inline-block;
         z-index: 2;
-
+       
         .oneProject {
             position: relative;
+         
             cursor: pointer;
 
             &:nth-child(1) {
@@ -82,6 +78,20 @@
                     }
                 }
             }
+            &:nth-child(5) {
+                .hoverContainer {
+                    .imageProject {
+                        background-image: url("../../images/projects/studhelp/studhelp.png");
+                    }
+                }
+            }
+            &:nth-child(6) {
+                .hoverContainer {
+                    .imageProject {
+                        background-image: url("../../images/projects/studhelp/studhelp.png");
+                    }
+                }
+            }
 
             .titleProject {
                 width: auto;
@@ -91,6 +101,11 @@
                 color: white;
                 margin-bottom: 20px;
                 font-size: 50px;
+
+                perspective: 80px;
+
+
+
             }
 
             // ----- Display project on title hover
@@ -166,11 +181,7 @@
 }
 /* ----- MEDIA QUERY ----- */
 @include sm {
-    #secondPage {
-        h2 {
-            font-size: 100px;
-        }
-
+    #projects {
         #projectsList {
             .oneProject {
                 .titleProject {
@@ -193,10 +204,7 @@
     }
 }
 @include md {
-    #secondPage {
-        h2 {
-            font-size: 120px;
-        }
+    #projects {
 
         #projectsList {
             .oneProject {
@@ -230,17 +238,10 @@
 }
 
 @include lg {
-    #secondPage {
+    #projects {
         #blob1,
         #blob2 {
             width: 75vw;
         }
-
-        h2 {
-            font-size: 170px;
-        }
     }
 }
-
-// @include xl {
-// }

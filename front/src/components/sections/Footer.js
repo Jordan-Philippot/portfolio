@@ -36,7 +36,7 @@ export default function Footer() {
       <div id="footer-hidden" ref={footerHidden}>
         <ul>
           <li>
-            <Link to={"/#firstPage"}>Accueil</Link>
+            <Link to={"/#home"}>Accueil</Link>
           </li>
 
           <li>
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* ----- LOGO CENTER ----- */}
           <li>
-            <Link to="/#firstPage">
+            <Link to="/#home">
               <LazyLoadImage
                 alt={"Aliz Logo"}
                 src={Logo}
@@ -54,7 +54,7 @@ export default function Footer() {
           </li>
 
           <li>
-            <a href={"/#projectsList"}>Projets</a>
+            <a href={"/#projects"}>Projets</a>
           </li>
 
           <li>

@@ -28,6 +28,9 @@ footer {
                     color: $black;
                     font-size: 18px;
                     text-decoration: none;
+                    &:hover {
+                        color: $darkblue;
+                    }
                 }
             }
         }
@@ -94,4 +97,3 @@ footer {
         }
     }
 }
-
