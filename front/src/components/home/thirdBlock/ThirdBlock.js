@@ -28,7 +28,7 @@ export default function ThirdBlock({ thirdBlockRef }) {
             backgroundImage: 'linear-gradient(90deg, #000, #fff, #000)',
             backgroundPosition: '500%',
             ease: Power2,
-            duration: 2,
+            duration: 1,
             delay: 0,
 
         }
@@ -46,7 +46,17 @@ export default function ThirdBlock({ thirdBlockRef }) {
             duration: 1
         }
     );
-    tl2.fromTo(smokyDescriptionnRef.current,
+
+    const tl3 = gsap.timeline({
+        scrollTrigger: {
+            trigger: smokyPresentationRef.current,
+            start: 'top-=800',
+            toggleActions: 'play none none reverse',
+            end: () => `+=${smokyPresentationRef.clientHeight / 2}`,
+            markers: false
+        }
+    });
+    tl3.fromTo(smokyDescriptionnRef.current,
         {
             backgroundImage: 'linear-gradient(90deg, #000, #fff, #000)',
             backgroundPosition: '-500%',
@@ -56,7 +66,7 @@ export default function ThirdBlock({ thirdBlockRef }) {
             backgroundImage: 'linear-gradient(90deg, #fff, #fff, #fff)',
             backgroundSize: '100%%',
             ease: Power2,
-            delay: 0,
+            delay: 1.5,
             duration: 1
         }
     );

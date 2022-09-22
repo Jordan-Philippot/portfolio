@@ -91,19 +91,18 @@ export default function HeaderTablet() {
             <div className="dropdown-divider" id="assistant-hr"></div>
 
             <li className="nav-item">
-              <Link to="/#about">À propos</Link>
+              <Link to="/#projects">Projets</Link>
             </li>
 
             <div className="dropdown-divider" id="assistant-hr"></div>
 
             <li className="nav-item">
-              <Link to="/#projects">Projets</Link>
+              <Link to="/#about">À propos</Link>
             </li>
-
             <div className="dropdown-divider"></div>
 
             <li className="nav-item">
-              <Link to="/#cv">CV</Link>
+              <Link to="/contact">Contact</Link>
             </li>
 
           </ul>

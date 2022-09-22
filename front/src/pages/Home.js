@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react'
 
 
 // ----- Components -----
-import FirstBlock from '../components/firstBlock/FirstBlock';
-import SecondBlock from '../components/secondBlock/SecondBlock';
-import ThirdBlock from '../components/thirdBlock/ThirdBlock';
+import FirstBlock from '../components/home/firstBlock/FirstBlock';
+import SecondBlock from '../components/home/secondBlock/SecondBlock';
+import ThirdBlock from '../components/home/thirdBlock/ThirdBlock';
 
 
 // ----- Packages -----
@@ -114,7 +114,7 @@ export default function Home({ location }) {
 
 
   return (
-    <div id="home">
+    <div id="homepage" className="page">
 
       {/* ----- FIRST BLOCK ( PRESENTATION ) ----- */}
       <FirstBlock firstBlockRef={firstBlockRef} />

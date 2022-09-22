@@ -40,7 +40,7 @@ export default function Footer() {
           </li>
 
           <li>
-            <Link to={"/#about"}>À propos</Link>
+            <a href={"/#projects"}>Projets</a>
           </li>
 
           {/* ----- LOGO CENTER ----- */}
@@ -54,11 +54,11 @@ export default function Footer() {
           </li>
 
           <li>
-            <a href={"/#projects"}>Projets</a>
+            <Link to={"/#about"}>À propos</Link>
           </li>
 
           <li>
-            <Link to={"/#cv"}>CV</Link>
+            <Link to={"/contact"}>Contact</Link>
           </li>
 
         </ul>

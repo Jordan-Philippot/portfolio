@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // ----- Packages -----
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -94,7 +94,7 @@ export default function MyProject() {
                 <link rel="canonical" href="https://jordanphilippot.com" />
             </Helmet>
 
-            <div id="myProject">
+            <div id="myProject" className="page">
 
                 <div id="blob"></div>
 
@@ -124,7 +124,9 @@ export default function MyProject() {
                             <p ref={thirdDescriptionProjectRef}>{myProject?.tools}</p>
                             <h3 ref={thirdTitleDescriptionProjectRef}>En vrac:</h3>
                             <p ref={fourDescriptionProjectRef}>{myProject?.other}</p>
-                            <a ref={linkProjectRef} href={myProject?.link} target="_blank" rel="noopener noreferrer" className="btn-darkBlue">Visiter le site</a>
+                            {myProject.link && <a ref={linkProjectRef} href={myProject?.link} target="_blank" rel="noopener noreferrer" className="btn-darkBlue">Visiter le site</a>}
+                            {myProject.github && <a ref={linkProjectRef} href={myProject?.github} target="_blank" rel="noopener noreferrer" className="btn-darkBlue">Lien Github</a>}
+
                         </div>
 
                     </div>

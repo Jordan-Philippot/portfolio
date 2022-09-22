@@ -4,11 +4,10 @@ import React from 'react'
 import OneProject from './OneProject'
 
 // ----- Services -----
-import { myProjects } from '../../services/constants/projects'
+import { myProjects } from '../../../services/constants/projects'
 
 // ----- Packages -----
 import gsap, { Power2 } from 'gsap'
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default function SecondBlock({ secondBlockRef }) {

@@ -16,11 +16,14 @@
 // Pages
 @import "./pages/home.scss";
 @import "./pages/myProject.scss";
+@import "./pages/contact.scss";
 @import "./pages/notFound.scss";
 
-
-// Components 
+// Components
 @import "./components/waves.scss";
+@import "./components/home/firstBlock.scss";
+@import "./components/home/secondBlock.scss";
+@import "./components/home/thirdBlock.scss";
 
 body {
     margin: 0;
@@ -29,13 +32,13 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
-    background-color: black;
+    background-color: $black;
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth !important;
     font-family: $font-family-bebas-neue;
-
+    color: $white;
 }
 
 code {

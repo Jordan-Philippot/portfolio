@@ -17,6 +17,7 @@ import Waves from './components/Waves'
 // ----- Pages -----
 import Home from './pages/Home'
 import MyProject from './pages/MyProject'
+import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 
 
@@ -64,6 +65,9 @@ export default function App() {
 
             {/* ----- My Project ----- */}
             <Route exact path="/project/:id" element={<MyProject />} />
+
+            {/* ----- Contact ----- */}
+            <Route exact path="/contact" element={<Contact />} />
 
           </Routes>
 

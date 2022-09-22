@@ -47,7 +47,7 @@ export default function OneProject({ project }) {
         var tl = gsap.timeline();
         tl.to(hoverContainerRef.current, { boxShadow: "unset", duration: 0.2, ease: Power1 })
         tl.to(blockInfoRef.current, { opacity: 0, y: "50px", duration: 0.2, ease: Power1 })
-        tl.to(infoProjectRef.current, { display: 'none', x: '-480px', duration: 0.4, ease: Power1.easeIn })
+        tl.to(infoProjectRef.current, { display: 'none', x: '-350px', duration: 0.4, ease: Power1.easeIn })
         if (IsDesktop) {
             tl.to(imageProjectRef.current, { borderRadius: "50%", width: "300px", duration: .3, ease: Power1.easeInOut })
         } else {

@@ -11,6 +11,7 @@ export const myProjects = [
         other: "Tâches cron | Listener | Webhook | Connexion Gmail & Outlook | Google Analitycs | OVH | FileZilla",
         logo: require('../../images/projects/aliz/logoAliz.png'),
         link: "https://aliz.io",
+        github: false,
         isMediaDesktop: true,
         images: [
             {
@@ -51,6 +52,7 @@ export const myProjects = [
         other: "Tâches cron | Listener | Webhook ",
         logo: require('../../images/projects/aliz/logoAliz.png'),
         link: "https://calendar.aliz.io",
+        github: false,
         isMediaDesktop: true,
         images: [
             {
@@ -91,6 +93,7 @@ export const myProjects = [
         other: "Webhook | Axios",
         logo: require('../../images/projects/aliz/logoAliz.png'),
         link: "https://verif.aliz.io",
+        github: false,
         isMediaDesktop: true,
         images: [
             {
@@ -132,32 +135,33 @@ export const myProjects = [
         tools: "React | Gsap | Figma | socket.io",
         other: "Google Maps | filtre de recherche avancés | api .gouv | Axios",
         logo: require('../../images/projects/studhelp/logoStudhelp.png'),
-        link: "",
+        link: false,
+        github: "https://github.com/Jordan-Philippot/studhelp_back",
         isMediaDesktop: true,
         images: [
             {
-                src: require('../../images/projects/alizVerif/alizVerif.png'),
-                alt: "Accueil du site https://verif.aliz.io",
+                src: require('../../images/projects/studhelp/studhelp.png'),
+                alt: "Accueil du site stud'help",
             },
             {
-                src: require('../../images/projects/alizVerif/multipleSearchAlizVerif.png'),
-                alt: "Page de recherche multiple de données d'entreprises",
+                src: require('../../images/projects/studhelp/howItWorksStudhelp.png'),
+                alt: "Page comment ça marche Stud'help",
             },
             {
-                src: require('../../images/projects/alizVerif/ourServicesAlizVerif.png'),
-                alt: "Page des différents services d'AlizVerif",
+                src: require('../../images/projects/studhelp/howItWorksStudhelp.png'),
+                alt: "Page comment ça marche Stud'help",
             },
             {
-                src: require('../../images/projects/alizVerif/pricesAlizVerif.png'),
-                alt: "Page des tarifs d'AlizVerif",
+                src: require('../../images/projects/studhelp/howItWorksStudhelp.png'),
+                alt: "Page comment ça marche Stud'help",
             },
             {
-                src: require('../../images/projects/alizVerif/verifDataAlizVerif.png'),
-                alt: "Page de vérification et nettoyage des données légales d'entreprises",
+                src: require('../../images/projects/studhelp/howItWorksStudhelp.png'),
+                alt: "Page comment ça marche Stud'help",
             },
             {
-                src: require('../../images/projects/alizVerif/resultsAlizVerif.png'),
-                alt: "Page de vérification et nettoyage des données légales d'entreprises",
+                src: require('../../images/projects/studhelp/howItWorksStudhelp.png'),
+                alt: "Page comment ça marche Stud'help",
             },
         ]
 
@@ -173,7 +177,8 @@ export const myProjects = [
         tools: "ReactNative | Figma",
         other: "api betaseries | Axios",
         logo: require('../../images/projects/netflix/logoNetflix.png'),
-        link: "",
+        link: false,
+        github: "https://github.com/Jordan-Philippot/react-native-netflix",
         isMediaDesktop: false,
         images: [
             {
@@ -214,7 +219,8 @@ export const myProjects = [
         tools: "React | Gsap",
         other: "",
         logo: require('../../images/projects/netflix/logoNetflix.png'),
-        link: "",
+        link: false,
+        github: false,
         isMediaDesktop: true,
 
         images: [
