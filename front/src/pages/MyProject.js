@@ -4,13 +4,14 @@ import { useParams } from "react-router-dom";
 // ----- Packages -----
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-
 // ----- Constant -----
 import { myProjects } from '../services/constants/projects'
 import { animationDirection } from '../services/constants/animationDirection'
 
 // ----- Services -----
 import { revealText } from '../services/helpers/revealText'
+
+// ----- Component -----
 
 export default function MyProject() {
     const { id } = useParams();
@@ -44,8 +45,6 @@ export default function MyProject() {
         } else {
             setHaveProject(false)
         }
-
-
         // eslint-disable-next-line
     }, [myProject])
 
@@ -64,27 +63,6 @@ export default function MyProject() {
     }, [haveProject])
 
 
-   
-
-    // Responsive Carousel
-    // const responsive = {
-    //     desktop: {
-    //         breakpoint: { max: 5000, min: 1300 },
-    //         items: 3,
-    //         slidesToSlide: 3 // optional, default to 1.
-    //     },
-    //     tablet: {
-    //         breakpoint: { max: 1300, min: 992 },
-    //         items: 2,
-    //         slidesToSlide: 2 // optional, default to 1.
-    //     },
-    //     mobile: {
-    //         breakpoint: { max: 992, min: 0 },
-    //         items: 1,
-    //         slidesToSlide: 1 // optional, default to 1.
-    //     }
-    // };
-
 
     return (
         <HelmetProvider>
@@ -96,7 +74,6 @@ export default function MyProject() {
 
             <div id="myProject" className="page">
 
-                <div id="blob"></div>
 
                 <div className="blob-container">
                     <div className={`image-container ${myProject.isMediaDesktop ? 'container-desktop' : 'container-mobile'} `}>
@@ -124,8 +101,8 @@ export default function MyProject() {
                             <p ref={thirdDescriptionProjectRef}>{myProject?.tools}</p>
                             <h3 ref={thirdTitleDescriptionProjectRef}>En vrac:</h3>
                             <p ref={fourDescriptionProjectRef}>{myProject?.other}</p>
-                            {myProject.link && <a ref={linkProjectRef} href={myProject?.link} target="_blank" rel="noopener noreferrer" className="btn-darkBlue">Visiter le site</a>}
-                            {myProject.github && <a ref={linkProjectRef} href={myProject?.github} target="_blank" rel="noopener noreferrer" className="btn-darkBlue">Lien Github</a>}
+                            {myProject.link && <a ref={linkProjectRef} href={myProject?.link} target="_blank" rel="noopener noreferrer" className="btn-default btn-darkBlue">Visiter le site</a>}
+                            {myProject.github && <a ref={linkProjectRef} href={myProject?.github} target="_blank" rel="noopener noreferrer" className="btn-default btn-darkBlue">Lien Github</a>}
 
                         </div>
 
@@ -135,43 +112,6 @@ export default function MyProject() {
                         Aucun projet  pour l'id {id && id}
                     </div>
                 }
-
-                {/* <div>
-                    <Carousel
-                        swipeable={false}
-                        draggable={true}
-                        showDots={true}
-                        ssr={false} // means to render carousel on server-side.
-                        infinite={true}
-                        autoPlay={true}
-                        autoPlaySpeed={100}
-                        keyBoardControl={true}
-                        customTransition="all .5"
-                        transitionDuration={500}
-                        containerClass="carousel-container"
-                        removeArrowOnDeviceType={[]}
-                        dotListClass="custom-dot-list-style"
-                        itemClass="carousel-item-padding-40-px"
-                        partialVisible={true}
-                        responsive={responsive}
-                    >
-
-                        <p>aaaaaaaaaaaa</p>
-                        <p>aaaaaaaaaaaa</p>
-                        <p>aaaaaaaaaaaa</p>
-                        <p>aaaaaaaaaaaa</p>
-                        <p>aaaaaaaaaaaa</p>
-
-                        {myProjects && myProjects.map((data, key) => {
-                            return (
-                                <div key={key}>
-                                    <Link href={"/project/" + data.id} className="alert alert-danger">{data.title}</Link>
-                                </div>
-                            );
-                        })}
-                    </Carousel>
-                </div> */}
-
 
             </div>
         </HelmetProvider >

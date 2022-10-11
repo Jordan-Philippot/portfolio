@@ -10,7 +10,7 @@ import { myProjects } from '../../../services/constants/projects'
 import gsap, { Power2 } from 'gsap'
 
 
-export default function SecondBlock({ secondBlockRef }) {
+export default function Projects({ ProjectsComponentRef }) {
 
   const sections = document.querySelectorAll('.oneProject');
 
@@ -42,7 +42,7 @@ export default function SecondBlock({ secondBlockRef }) {
 
 
   return (
-    <section id="projects" className="container-fluid" ref={secondBlockRef}>
+    <section id="projects" className="container-fluid" ref={ProjectsComponentRef}>
 
       <div id="blob1"></div>
       <div id="blob2"></div>

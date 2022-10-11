@@ -98,9 +98,8 @@ $shadowTwo: #ffffff36;
 }
 
 #loader {
- 
   /* Blob on center */
-  #blob {
+  #blob-white-animated {
     position: absolute;
     top: calc(50% - 60px);
     left: calc(50% - 60px);
@@ -140,6 +139,7 @@ $shadowTwo: #ffffff36;
       filter: blur(3px);
     }
   }
+
   #hole {
     position: absolute;
     max-height: 100vh;

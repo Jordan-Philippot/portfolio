@@ -44,7 +44,7 @@ export default function Loader() {
             <Cursor />
 
             {/* ----- Blob on center ----- */}
-            <div id="blob"></div>
+            <div id="blob-white-animated"></div>
 
             <div id="dev" className="title-loader">
                 <p className="glitch-text">Développeur</p>

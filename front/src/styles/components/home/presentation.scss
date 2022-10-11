@@ -11,8 +11,7 @@
         position: relative;
         margin: 120px auto 50px auto;
         z-index: 3;
-        background: $lightblue;
-
+        background: $darkblue;
         width: 250px;
         height: 250px;
         border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
@@ -39,7 +38,7 @@
         &::after {
             content: "";
             position: absolute;
-            z-index: 999;
+            z-index: 20;
             top: 0;
             left: 0;
             right: 0;
@@ -54,10 +53,35 @@
         h1 {
             text-align: justify;
             position: relative;
+            strong {
+                font-size: 50px;
+            }
+            b {
+                color: $darkblue;
+            }
         }
-        button {
-            margin: 15px 0;
-            display: block;
+        #home-contact {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            justify-content: center;
+            a {
+                margin: 25px 12px;
+                display: block;
+                svg {
+                    border: 1px solid $darkblue;
+                    padding: 10px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 6px;
+                    fill: $darkblue;
+
+                    &:hover {
+                        background-color: rgb(68, 121, 255);
+                        fill: white;
+                    }
+                }
+            }
         }
     }
 
@@ -82,102 +106,10 @@
         right: 0;
     }
 
-    svg{
-        display: none;
-    }
+    // svg {
+    //     display: none;
+    // }
 }
-/* ----- BLOB ANIMATION ----- */
-@keyframes morph {
-    0%,
-    100% {
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-    }
-    34% {
-        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-    }
-    67% {
-        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-    }
-}
-@keyframes morph-hover {
-    0% {
-        background: rgba(29, 236, 255, 1);
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-        transform: translate(0, 0);
-    }
-    16.6% {
-        transform: translate(0, 5px);
-        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-        background: rgb(29, 157, 255);
-    }
-    33.6% {
-        transform: translate(0, 0);
-        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-    }
-    50.2% {
-        transform: translate(0, 5px);
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-        background: rgb(112, 29, 255);
-    }
-    66.8% {
-        transform: translate(0, 0);
-        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-    }
-    83.4% {
-        transform: translate(0, 5px);
-        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-    }
-    100% {
-        transform: translate(0, 0);
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-        background: rgba(29, 236, 255, 1);
-    }
-}
-
-@keyframes blob-appear {
-    0% {
-        scale: 0;
-        transform: translate(50vw, -50vh);
-    }
-    70% {
-        scale: 0.5;
-    }
-    100% {
-        scale: 1;
-        transform: translate(0, 0);
-    }
-}
-
-/* ----- TEXT REVEAL ANIMATION ----- */
-@keyframes clip-text {
-    from {
-        clip-path: inset(0 100% 0 0);
-    }
-    to {
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-@keyframes text-revealer {
-    0%,
-    50% {
-        transform-origin: 0 50%;
-    }
-
-    60%,
-    100% {
-        transform-origin: 100% 50%;
-    }
-
-    60% {
-        transform: scaleX(1);
-    }
-
-    100% {
-        transform: scaleX(0);
-    }
-}
-/* ----- END TEXT REVEAL ANIMATION ----- */
 
 /* ----- MEDIA QUERY ----- */
 @include sm {
@@ -243,6 +175,13 @@
             h1 {
                 font-size: 40px;
             }
+            #home-contact {
+                justify-content: flex-start;
+                a {
+                    margin: 25px 15px 0 0;
+                   
+                }
+            }
         }
         /* ----- TEXT DARK GREY IN BACKGROUND ----- */
         .text-background p {
@@ -255,14 +194,14 @@
             bottom: 10vh;
         }
 
-        svg{
-            display: block;
-            position: absolute;
-            z-index: 10;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+        // svg {
+        //     display: block;
+        //     position: absolute;
+        //     z-index: 5;
+        //     bottom: 0;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        // }
     }
 }
 
@@ -272,6 +211,9 @@
         .reveal-text {
             h1 {
                 font-size: 50px;
+                strong {
+                    font-size: 75px;
+                }
             }
         }
         #text-background-react {

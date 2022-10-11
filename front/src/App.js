@@ -17,7 +17,6 @@ import Waves from './components/Waves'
 // ----- Pages -----
 import Home from './pages/Home'
 import MyProject from './pages/MyProject'
-import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 
 
@@ -27,6 +26,7 @@ export default function App() {
   const [location, setLocation] = useState('')
 
   const wavesRef = useRef()
+  const [isScrolledAboutUs, setIsScrolledAboutUs] = useState("load")
 
   const [loaded, setLoaded] = useState(false)
 
@@ -61,18 +61,15 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
 
             {/* ----- Homepage ----- */}
-            <Route exact path="/" element={<Home location={location} />} />
+            <Route exact path="/" element={<Home location={location} setIsScrolledAboutUs={setIsScrolledAboutUs} />} />
 
             {/* ----- My Project ----- */}
             <Route exact path="/project/:id" element={<MyProject />} />
 
-            {/* ----- Contact ----- */}
-            <Route exact path="/contact" element={<Contact />} />
-
           </Routes>
 
           {/* ----- WAVES ----- */}
-          <Waves wavesRef={wavesRef} />
+          <Waves wavesRef={wavesRef} isScrolledAboutUs={isScrolledAboutUs} />
 
           <Footer />
 

@@ -102,7 +102,7 @@ export default function HeaderTablet() {
             <div className="dropdown-divider"></div>
 
             <li className="nav-item">
-              <Link to="/contact">Contact</Link>
+              <Link to="/#contact">Contact</Link>
             </li>
 
           </ul>

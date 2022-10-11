@@ -1,12 +1,33 @@
-.btn-darkBlue {
+.btn-default {
     font-size: 20px;
     text-decoration: none;
-    background-color: $darkblue;
     border-radius: 6px;
     padding: 10px 25px;
     display: inline-block;
     border: none;
+}
+
+.btn-darkBlue {
+    background-color: $darkblue;
     &:hover {
         background-color: $lightblue;
+    }
+}
+.btn-black{
+    color: $white;
+    background-color: $black;
+    &:hover {
+        background-color: rgb(50, 50, 50);
+    }
+}
+input {
+    border-radius: 25px;
+    padding: 5px 15px;
+    border: 1px solid rgb(150, 150, 150);
+    outline: none;
+    &:focus,
+    &:active {
+        border: 1px solid rgba(68, 121, 255, 0.5);
+        // box-shadow: 0 0 5px 1px rgba(68, 121, 255, 0.5);
     }
 }

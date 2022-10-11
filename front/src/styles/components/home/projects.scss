@@ -36,7 +36,7 @@
     h2 {
         padding-top: 50px;
         margin-bottom: 50px;
-        text-align: left;
+        text-align: right;
     }
 
     #projectsList {
@@ -89,7 +89,7 @@
             &:nth-child(6) {
                 .hoverContainer {
                     .imageProject {
-                        background-image: url("../../../images/projects/studhelp/studhelp.png");
+                        background-image: url("../../../images/projects/ted/homeTed.png");
                     }
                 }
             }
@@ -160,19 +160,6 @@
                 }
             }
         }
-    }
-}
-/* ----- BLOB ANIMATION ----- */
-@keyframes morph {
-    0%,
-    100% {
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-    }
-    34% {
-        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-    }
-    67% {
-        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     }
 }
 

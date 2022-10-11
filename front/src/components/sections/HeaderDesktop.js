@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 import Logo from "../../images/logo.png"
 
 // Packages 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import gsap from "gsap"
 
 
@@ -41,9 +39,13 @@ export default function HeaderDesktop() {
 
     useEffect(() => {
         if (show) {
-            gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: 'ease-in-out' });
+            setTimeout(() => {
+                gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: 'ease-in-out' });
+            }, 1000);
         } else {
-            gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: 'ease-in-out' });
+            setTimeout(() => {
+                gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: 'ease-in-out' });
+            }, 1000);
         }
         // eslint-disable-next-line
     }, [show])
@@ -62,16 +64,15 @@ export default function HeaderDesktop() {
 
                 {/* ----- Logo ----- */}
                 <Link className="navbar-brand" to="/">
-                    <LazyLoadImage
+                    <img
                         alt={"Aliz Logo"}
-                        src={Logo}
-                        effect="blur" />
+                        src={Logo} />
                 </Link>
 
                 <div className="collapse navbar-collapse">
                     {/* ----- Nav right ----- */}
                     <ul className="navbar-nav">
-                        
+
                         <li className="nav-item">
                             <Link to={"/#home"}>Accueil</Link>
                         </li>
@@ -85,7 +86,7 @@ export default function HeaderDesktop() {
                         </li>
 
                         <li className="nav-item">
-                            <Link to={"/contact"}>Contact</Link>
+                            <Link to={"/#contact"}>Contact</Link>
                         </li>
                     </ul>
                 </div>

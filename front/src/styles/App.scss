@@ -4,9 +4,9 @@
 @import "./tools/variables.scss";
 @import "./tools/rules.scss";
 @import "./tools/forms.scss";
-@import "./tools/pages.scss";
 @import "./tools/loader.scss";
 @import "./tools/cursor.scss";
+@import "./tools/animations.scss";
 
 // Sections
 @import "./sections/header.scss";
@@ -16,14 +16,15 @@
 // Pages
 @import "./pages/home.scss";
 @import "./pages/myProject.scss";
-@import "./pages/contact.scss";
 @import "./pages/notFound.scss";
 
 // Components
 @import "./components/waves.scss";
-@import "./components/home/firstBlock.scss";
-@import "./components/home/secondBlock.scss";
-@import "./components/home/thirdBlock.scss";
+@import "./components/popup.scss";
+@import "./components/home/presentation.scss";
+@import "./components/home/about.scss";
+@import "./components/home/projects.scss";
+@import "./components/home/contact.scss";
 
 body {
     margin: 0;

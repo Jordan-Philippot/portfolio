@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 
 // ----- Components -----
-import FirstBlock from '../components/home/firstBlock/FirstBlock';
-import SecondBlock from '../components/home/secondBlock/SecondBlock';
-import ThirdBlock from '../components/home/thirdBlock/ThirdBlock';
+import PresentationComponent from '../components/home/presentation/Presentation';
+import ProjectsComponent from '../components/home/myProjects/Projects';
+import AboutComponent from '../components/home/about/About';
+import ContactMeComponent from '../components/home/contactMe/contactMe';
 
 
 // ----- Packages -----
@@ -12,14 +13,14 @@ import gsap, { Power2 } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
-export default function Home({ location }) {
+export default function Home({ location, setIsScrolledAboutUs }) {
 
-  // const [isScrolled, setIsScrolled] = useState("load")
 
   // ----- Refs ----- 
-  const firstBlockRef = useRef()
-  const secondBlockRef = useRef()
-  const thirdBlockRef = useRef()
+  const PresentationComponentRef = useRef()
+  const ProjectsComponentRef = useRef()
+  const AboutComponentRef = useRef()
+  const ContactMeComponentRef = useRef()
 
 
   gsap.registerPlugin(ScrollTrigger);
@@ -55,13 +56,16 @@ export default function Home({ location }) {
   useEffect(() => {
     switch (location.hash) {
       case "#home":
-        firstBlockRef.current.scrollIntoView()
-        break;
-      case "#projects":
-        secondBlockRef.current.scrollIntoView()
+        PresentationComponentRef.current.scrollIntoView()
         break;
       case "#about":
-        thirdBlockRef.current.scrollIntoView()
+        AboutComponentRef.current.scrollIntoView()
+        break;
+      case "#projects":
+        ProjectsComponentRef.current.scrollIntoView()
+        break;
+      case "#contact":
+        ContactMeComponentRef.current.scrollIntoView()
         break;
       default:
         break;
@@ -69,17 +73,24 @@ export default function Home({ location }) {
   }, [location])
 
 
-  // window.onscroll = function (ev) {
-  //   if (window.scrollY > (firstBlockRef.current.offsetHeight - window.innerHeight) + 101) {
-  //     setIsScrolled("true")
-  //   } else {
-  //     setIsScrolled("false")
-  //   }
-  // };
+  window.onscroll = function (ev) {
+    if (window.scrollY > (PresentationComponentRef.current.offsetHeight - window.innerHeight) + 101 && window.scrollY < (PresentationComponentRef.current.offsetHeight - window.innerHeight) + 101 + AboutComponentRef.current.offsetHeight) {
+      setIsScrolledAboutUs("true")
+    } else {
+      setIsScrolledAboutUs("false")
+    }
+  };
 
 
   // useEffect(() => {
-  // if (isScrolled === "true") {
+  // if (isScrolledAboutUs === "true") {
+
+  //   gsap.to(wavesRef.current, {
+  //     minHeight: "1500vh",
+  //     maxHeight: "1500vh",
+  //     height: "1500vh",
+  //     duration: 0.3
+  //   })
 
   // gsap.to(wavesRef.current, {
   //   minHeight: "1500vh",
@@ -102,7 +113,7 @@ export default function Home({ location }) {
   //   });
   // }, 500);
 
-  // } else if (isScrolled === "false") {
+  // } else if (isScrolledAboutUs === "false") {
   // gsap.to(wavesRef.current, {
   //   minHeight: "100px",
   //   maxHeight: "150px",
@@ -116,15 +127,17 @@ export default function Home({ location }) {
   return (
     <div id="homepage" className="page">
 
-      {/* ----- FIRST BLOCK ( PRESENTATION ) ----- */}
-      <FirstBlock firstBlockRef={firstBlockRef} />
+      {/* ----- PRESENTATION ----- */}
+      <PresentationComponent PresentationComponentRef={PresentationComponentRef} />
 
-      {/* ----- SECOND BLOCK ( MY PROJETCS ) ----- */}
-      <SecondBlock secondBlockRef={secondBlockRef} />
+      {/* ----- ABOUT ME ----- */}
+      <AboutComponent AboutComponentRef={AboutComponentRef} />
 
-      {/* ----- THIRD BLOCK ( ABOUT ME ) ----- */}
-      <ThirdBlock thirdBlockRef={thirdBlockRef} />
+      {/* -----  MY PROJETCS ----- */}
+      <ProjectsComponent ProjectsComponentRef={ProjectsComponentRef} />
 
+      {/* ----- CONTACT ME ----- */}
+      <ContactMeComponent ContactMeComponentRef={ContactMeComponentRef} />
 
     </div>
   )

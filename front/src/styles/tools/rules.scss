@@ -5,6 +5,13 @@
     flex-direction: column-reverse;
 }
 
+.page {
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+
 a:hover {
     text-decoration: none;
     color: inherit;
