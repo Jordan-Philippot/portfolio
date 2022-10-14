@@ -10,14 +10,14 @@ import Logo from "../../images/logo.png"
 export default function HeaderTablet() {
 
   const [nav, setNav] = useState(false);
-  const [show, setShow] = useState(false)
+  // const [show, setShow] = useState(false)
 
-  const [scrollTop, setScrollTop] = useState("")
-  const [lastScrollTop, setLastScrollTop] = useState('')
+  // const [scrollTop, setScrollTop] = useState("")
+  // const [lastScrollTop, setLastScrollTop] = useState('')
 
 
   /* ----- Get The NavBar ----- */
-  const navbar = document.getElementById('headerTablet');
+  // const navbar = document.getElementById('headerTablet');
 
   const toggledNavbar = (e) => {
     e.preventDefault();
@@ -27,8 +27,14 @@ export default function HeaderTablet() {
   useEffect(() => {
     if (!nav) {
       gsap.to('#navbarNavDropdown', { display: 'none', opacity: 0, duration: 0.8 });
+      gsap.to('nav', {backgroundColor: 'transparent', duration: 1});
+      gsap.to('.toggler-span', {backgroundColor: 'white', duration: 1});
+
     } else {
       gsap.to('#navbarNavDropdown', { display: 'block', opacity: 1, duration: 0.8 });
+      gsap.to('nav', {backgroundColor: 'white', duration: 0.2});
+      gsap.to('.toggler-span', {backgroundColor: 'black', duration: 1});
+
     }
   }, [nav])
 
@@ -36,32 +42,32 @@ export default function HeaderTablet() {
 
 
   /* ----- On every scroll this funtion will be called ----- */
-  window.addEventListener('scroll', function () {
+  // window.addEventListener('scroll', function () {
 
-    /* ----- This line will get the location on scroll ----- */
-    setScrollTop(window.pageYOffset || document.documentElement.scrollTop)
-
-
-    /* ----- If it will be greater than the previous ----- */
-    if (scrollTop > lastScrollTop) {
-      setShow(false)
-    } else {
-      setShow(true)
-    }
-
-    /* ----- New Position Stored ----- */
-    setLastScrollTop(scrollTop)
-  });
+  //   /* ----- This line will get the location on scroll ----- */
+  //   setScrollTop(window.pageYOffset || document.documentElement.scrollTop)
 
 
-  useEffect(() => {
-    if (show) {
-      gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: 'ease-in-out' });
-    } else {
-      gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: 'ease-in-out' });
-    }
-    // eslint-disable-next-line
-  }, [show])
+  //   /* ----- If it will be greater than the previous ----- */
+  //   if (scrollTop > lastScrollTop) {
+  //     setShow(false)
+  //   } else {
+  //     setShow(true)
+  //   }
+
+  //   /* ----- New Position Stored ----- */
+  //   setLastScrollTop(scrollTop)
+  // });
+
+
+  // useEffect(() => {
+  //   if (show) {
+  //     gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: 'ease-in-out' });
+  //   } else {
+  //     gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: 'ease-in-out' });
+  //   }
+  //   // eslint-disable-next-line
+  // }, [show])
 
 
   return (
@@ -74,7 +80,9 @@ export default function HeaderTablet() {
 
         {/* ----- Button toggled responsive  ----- */}
         <button onClick={toggledNavbar} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+          <span className="toggler-span"></span>
+          <span className="toggler-span"></span>
+          <span className="toggler-span"></span>
         </button>
 
         {/* ----- Dropdown on click ----- */}

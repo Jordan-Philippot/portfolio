@@ -24,6 +24,9 @@
             // background-size: 80%;
             // background-clip: text;
             // -webkit-text-fill-color: rgba(255, 255, 255, 0);
+            b {
+                color: $darkblue;
+            }
         }
 
         #about-description {
@@ -37,6 +40,7 @@
                     border: 1px solid rgba(68, 121, 255, 0.3);
                     cursor: pointer;
                     font-family: $font-family-bebas-neue;
+                    margin: 0;
 
                     &:nth-child(1) {
                         border-top-left-radius: 6px;
@@ -46,7 +50,6 @@
                         border-bottom-left-radius: 6px;
                         border-bottom-right-radius: 6px;
                     }
-                    margin: 0;
                 }
                 .choice-active {
                     background-color: $darkblue;
@@ -63,9 +66,11 @@
                     }
                 }
             }
+
             #skills,
             #langage {
                 margin-top: 50px;
+               
             }
         }
         p {
@@ -86,13 +91,12 @@
     #about {
         .container-about {
             #about-description {
-                font-size: 18px;
-
                 .description-choice {
                     display: flex;
                     h3 {
                         padding: 15px 0;
                         width: 50%;
+                        font-size: 22px;
                         &:nth-child(1) {
                             border-radius: 0;
                             border-top-left-radius: 6px;
@@ -119,9 +123,6 @@
     #about {
         .container-about {
             width: 70vw;
-            #about-description {
-                font-size: 20px;
-            }
         }
     }
 }

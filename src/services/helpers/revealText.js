@@ -60,7 +60,7 @@ export const scrollReveal = (element, abscissaX) => {
                 scrollTrigger: {
                     trigger: section,
                     start: 'top-=800',
-                    toggleActions: 'play none none reverse',
+                    toggleActions: 'play none none none',
                     end: () => `+=${section.clientHeight / 2}`,
                     markers: false
                 }

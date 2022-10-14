@@ -13,7 +13,7 @@
         }
     }
     nav {
-        background-color: white;
+        // background-color: white;
         padding: 1.5vh 10vw;
         overflow-x: hidden;
 
@@ -24,14 +24,21 @@
             }
         }
 
-        .navbar-toggler{
+        .navbar-toggler {
             border: none !important;
             color: transparent !important;
             box-sizing: unset;
-          
-            .navbar-toggler-icon{
-                color: black !important;
 
+            .toggler-span {
+                width: 35px;
+                height: 3px;
+                margin-top: 6px;
+                border-radius: 25px;
+                background-color: white;
+                display: block;
+                &:hover {
+                    background-color: $darkblue;
+                }
             }
         }
         .navbar-nav {
@@ -52,7 +59,6 @@
                     color: $black;
                 }
             }
-           
         }
 
         // Hr div

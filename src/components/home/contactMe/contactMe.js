@@ -43,6 +43,8 @@ export default function ContactMe({ ContactMeComponentRef }) {
         gsap.fromTo(clickMeRef.current, { opacity: 1, display: 'block', scale: 1 }, { opacity: 0, display: 'none', scale: 0.4, duration: 1 })
         gsap.fromTo("#secondContact", { display: 'none', scale: 0.3 }, { display: 'flex', duration: 1, scale: 1, delay: .8, ease: Power4 })
         tl.fromTo('#spiral', { rotation: 0 }, { rotation: 360, duration: 1.5, scale: 0, delay: 1 })
+        tl.to('#blob-white-animated', { width: "400px", height: "400px", top: "calc(50% - 220px)", left: "calc(50% - 200px)", duration: .8 })
+
         tl.set("#spiral", { display: 'none' })
 
         if (window.innerWidth > 1200) {
@@ -93,7 +95,7 @@ export default function ContactMe({ ContactMeComponentRef }) {
                 <div className="btn-whatsapp-pulse">
                     <img src={PhoneSvg} alt='téléphone' />
                 </div>
-                <p>Tack the call</p>
+                <p>Répondre</p>
             </div>
 
 

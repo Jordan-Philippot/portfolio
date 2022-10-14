@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
 // ----- Packages -----
-import gsap, { Power2 } from 'gsap'
+// import gsap, { Power2 } from 'gsap'
 
 // ----- Services -----
 import { scrollReveal } from '../../../services/helpers/revealText'
@@ -87,15 +87,17 @@ export default function About({ AboutComponentRef }) {
 
             <div className="container-about">
                 <p id="about-presentation" ref={smokyPresentationRef}>
-                    En tant que développeur Fullstack JavaScript et PHP, j'ai fait le choix de me spécialiser sur la bibliothèque ReactJS et le framework Symfony.
+                    En tant que développeur Fullstack <b>JavaScript</b> et <b>PHP</b>, j'ai fait le choix de me spécialiser sur la bibliothèque <b>ReactJS</b> et le framework <b>Symfony</b>.
                     <br></br>
                     <br></br>
 
-                    Depuis 2020, j'ai contribué à de nombreux projets, dont la création des sites web de la start-up TED consulting,
+                    Depuis 2020, j'ai contribué à de nombreux projets, dont la création des sites web de la start-up TED consulting (& Aliz),
                     dans laquelle j'ai effectué mon alternance.
-                    Cela m'a permis de monter rapidement en compétences afin d'être capable aujourd'hui de créer et maintenir un projet en toute autonomie :
+                    <br/>
+                    Les compétences acquises durant ces 2 années me permettent aujourd'hui de répondre tant aux problématiques techniques que clientèles, le tout dans les plus brefs délais:
+    
                     <br />
-                    Intégration de maquette, évolution/ maintenance de l'existant, création de base de données et de son API, mise en place d'un système de paiement...
+                    compréhension des besoins, création / évolution d'un site web (site vitrine, e-commerce, single page, portfolio... ), création de base de données et de son API, mise en place d'un système de paiement, mobile first, UX...
                 </p>
 
 
@@ -121,7 +123,7 @@ export default function About({ AboutComponentRef }) {
                                 <p>Mise en place de services </p>
                                 <p>Tâches CRON </p>
                                 <p>Envoies automatisés de SMS / Email </p>
-                                <p>Création intégration de maquettes</p>
+                                <p>Création / intégration de maquettes</p>
                             </div>
                             :
                             <div className="revealScroll" id="langage">

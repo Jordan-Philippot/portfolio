@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: white;
+    background: transparent;
     z-index: 5;
     /* ----- Define a height for NavBar -----*/
     height: 100px;
@@ -11,7 +11,7 @@
 
     * {
         text-decoration: none;
-        color: black;
+        color: white;
         font-family: $font-family-bebas-neue;
         font-weight: 700;
     }
@@ -34,12 +34,11 @@
                 margin-left: 3vw;
                 font-size: 26px;
                 cursor: pointer;
-                a{
+                a {
                     &:hover {
                         color: $darkblue;
                     }
                 }
-               
             }
         }
     }

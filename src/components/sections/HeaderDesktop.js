@@ -1,65 +1,52 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 // Images
 import Logo from "../../images/logo.png"
 
 // Packages 
-import gsap from "gsap"
+// import gsap from "gsap"
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default function HeaderDesktop() {
 
-    const [show, setShow] = useState(false)
-
-    const [scrollTop, setScrollTop] = useState("")
-    const [lastScrollTop, setLastScrollTop] = useState('')
-
-    /* ----- Get The NavBar ----- */
-    const navbar = document.getElementById('headerDesktop');
-
-    /* ----- On every scroll this funtion will be called ----- */
-    window.addEventListener('scroll', function () {
-
-        /* ----- This line will get the location on scroll ----- */
-        setScrollTop(window.pageYOffset || document.documentElement.scrollTop)
+    const headerRef = useRef()
 
 
-        /* ----- If it will be greater than the previous ----- */
-        if (scrollTop > lastScrollTop) {
-            setShow(false)
-        } else {
-            setShow(true)
-        }
+    // ScrollTrigger.create({
+    //     start: "top top",
+    //     end: 99999,
+    //     onUpdate: (self) => {
+    //         // console.log(self.direction)
+    //         if (self.direction) {
+    //             gsap.set(headerRef.current,
 
-        /* ----- New Position Stored ----- */
-        setLastScrollTop(scrollTop)
-    });
+    //                 {
+    //                     y: "-100%",
+    //                     // paused: true,
+    //                 }
+    //             );
 
+    //         } else if (!self.direction) {
+    //             gsap.set(
+    //                 headerRef.current,
 
-    useEffect(() => {
-        if (show) {
-            setTimeout(() => {
-                gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: 'ease-in-out' });
-            }, 1000);
-        } else {
-            setTimeout(() => {
-                gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: 'ease-in-out' });
-            }, 1000);
-        }
-        // eslint-disable-next-line
-    }, [show])
+    //                 {
+    //                     y: 0,
+    //                     // paused: true,
+    //                 }
+    //             );
 
-    useEffect(() => {
-        setShow(true)
-
-    }, [])
+    //         }
+    //     }
+    // });
 
 
 
 
     return (
-        <div id="headerDesktop">
+        <div id="headerDesktop" ref={headerRef}>
             <nav className="navbar navbar-expand-xl">
 
                 {/* ----- Logo ----- */}
