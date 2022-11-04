@@ -36,7 +36,7 @@ export default function App() {
     setTimeout(() => {
       setLoaded(true)
 
-    }, 1000);
+    }, 5000);
     // eslint-disable-next-line
   }, [])
 
