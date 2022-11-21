@@ -39,7 +39,7 @@
     "start:local": "env-cmd -f .env react-scripts start",
     "start:staging": "env-cmd -f .env.staging react-scripts start",
     "start:prod": "env-cmd -f .env.production react-scripts start",
-    "build": "react-scripts build",
+    "build": "node --max_old_space_size=2560 node_modules/.bin/react-scripts build",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "build:prod": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test",
