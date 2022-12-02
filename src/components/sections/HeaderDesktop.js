@@ -65,11 +65,11 @@ export default function HeaderDesktop() {
                         </li>
 
                         <li className="nav-item">
-                            <a href={"/#projects"}>Projets</a>
+                            <Link to={"/#about"}>À propos</Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to={"/#about"}>À propos</Link>
+                            <a href={"/#projects"}>Projets</a>
                         </li>
 
                         <li className="nav-item">
