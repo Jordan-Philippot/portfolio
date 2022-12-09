@@ -148,7 +148,7 @@ export const myProjects = [
                 alt: "Page comment ça marche Stud'help",
             },
             {
-                src: require('../../images/projects/studhelp/createEventFormStudhelp.png'),
+                src: require('../../images/projects/studhelp/registerStudhelp.png'),
                 alt: "Page de création d'évènements Stud'help",
             },
             {
