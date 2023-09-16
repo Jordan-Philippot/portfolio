@@ -1,10 +1,5 @@
 import React, { useRef, useState } from 'react'
 
-// ----- Packages -----
-// import gsap, { Power2 } from 'gsap'
-
-// ----- Services -----
-import { scrollReveal } from '../../../services/helpers/revealText'
 
 
 export default function About({ AboutComponentRef }) {
@@ -14,68 +9,6 @@ export default function About({ AboutComponentRef }) {
     const smokyPresentationRef = useRef()
     const smokyDescriptionRef = useRef()
 
-    // const tl2 = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: smokyPresentationRef.current,
-    //         start: 'top-=800',
-    //         toggleActions: 'play none none reverse',
-    //         end: () => `+=${smokyPresentationRef.clientHeight / 2}`,
-    //         markers: false
-    //     }
-    // });
-    // tl2.fromTo(smokyPresentationRef.current,
-    //     {
-    //         backgroundImage: 'linear-gradient(90deg, #000, #fff, #000)',
-    //         backgroundPosition: '-500%',
-    //     },
-    //     {
-    //         backgroundImage: 'linear-gradient(90deg, #000, #fff, #000)',
-    //         backgroundPosition: '500%',
-    //         ease: Power2,
-    //         duration: 1,
-    //         delay: 0,
-
-    //     }
-    // );
-    // tl2.fromTo(smokyPresentationRef.current,
-    //     {
-    //         backgroundPosition: '500%',
-    //     },
-    //     {
-    //         backgroundPosition: '0',
-    //         backgroundImage: 'linear-gradient(90deg, #fff, #fff, #fff)',
-    //         backgroundSize: '100%%',
-    //         ease: Power2,
-    //         delay: 0,
-    //         duration: 1
-    //     }
-    // );
-
-    scrollReveal(".revealScroll p", false)
-    // const tl3 = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: smokyPresentationRef.current,
-    //         start: 'top-=800',
-    //         toggleActions: 'play none none reverse',
-    //         end: () => `+=${smokyPresentationRef.clientHeight / 2}`,
-    //         markers: false
-    //     }
-    // });
-    // tl3.fromTo(smokyDescriptionRef.current,
-    //     {
-    //         backgroundImage: 'linear-gradient(90deg, #000, #fff, #000)',
-    //         backgroundPosition: '-500%',
-    //     },
-    //     {
-    //         backgroundPosition: '0',
-    //         backgroundImage: 'linear-gradient(90deg, #fff, #fff, #fff)',
-    //         backgroundSize: '100%%',
-    //         ease: Power2,
-    //         delay: 1.5,
-    //         duration: 1
-    //     }
-    // );
-
 
 
 
@@ -83,7 +16,6 @@ export default function About({ AboutComponentRef }) {
         <section id="about" className="container-fluid" ref={AboutComponentRef}>
             <h2>À propos</h2>
 
-            {/* <svg id="visual" className="roundedBackground" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1"><g fill="#4478ffc5"><circle r="89" cx="692" cy="429"></circle><circle r="6" cx="437" cy="357"></circle><circle r="49" cx="192" cy="468"></circle><circle r="77" cx="251" cy="125"></circle><circle r="11" cx="456" cy="161"></circle><circle r="65" cx="634" cy="225"></circle><circle r="83" cx="771" cy="98"></circle><circle r="9" cx="93" cy="258"></circle></g></svg> */}
 
             <div className="container-about">
                 <p id="about-presentation" ref={smokyPresentationRef}>
@@ -94,10 +26,11 @@ export default function About({ AboutComponentRef }) {
                     Depuis 2020, j'ai contribué à de nombreux projets, dont la création des sites web de la start-up TED consulting (& Aliz),
                     dans laquelle j'ai effectué mon alternance.
                     <br/>
-                    Les compétences acquises durant ces 2 années me permettent aujourd'hui de répondre tant aux problématiques techniques que clientèles, le tout dans les plus brefs délais:
+                    Les compétences acquises durant ces 3 années me permettent aujourd'hui de répondre tant aux problématiques techniques que clientèles, le tout dans les plus brefs délais:
     
                     <br />
-                    compréhension des besoins, création / évolution d'un site web (site vitrine, e-commerce, single page, portfolio... ), création de base de données et de son API, mise en place d'un système de paiement, mobile first, UX...
+                    compréhension des besoins, création / évolution d'un site web (site vitrine, e-commerce, single page, portfolio, back office... ), 
+                    création de base de données et de son API, mise en place d'un système de paiement, mobile first, UX...
                 </p>
 
 
@@ -128,6 +61,8 @@ export default function About({ AboutComponentRef }) {
                             :
                             <div className="revealScroll" id="langage">
                                 <p>Javascript </p>
+                                <p>Typescript</p>
+                                <p>Redux</p>
                                 <p>SQL / NOSQL </p>
                                 <p>React </p>
                                 <p>Symfony</p>
