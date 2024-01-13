@@ -60,25 +60,32 @@
             &:nth-child(2) {
                 .hoverContainer {
                     .imageProject {
-                        background-image: url("../../../images/projects/alizCalendar/meetingAlizCalendar.png");
+                        background-image: url("../../../images/projects/aliz/aliz.png");
                     }
                 }
             }
             &:nth-child(3) {
                 .hoverContainer {
                     .imageProject {
-                        background-image: url("../../../images/projects/alizVerif/alizVerif.png");
+                        background-image: url("../../../images/projects/alizCalendar/meetingAlizCalendar.png");
                     }
                 }
             }
             &:nth-child(4) {
                 .hoverContainer {
                     .imageProject {
-                        background-image: url("../../../images/projects/studhelp/studhelp.png");
+                        background-image: url("../../../images/projects/alizVerif/alizVerif.png");
                     }
                 }
             }
             &:nth-child(5) {
+                .hoverContainer {
+                    .imageProject {
+                        background-image: url("../../../images/projects/studhelp/studhelp.png");
+                    }
+                }
+            }
+            &:nth-child(6) {
                 .hoverContainer {
                     .imageProject {
                         background-image: url("../../../images/projects/netflix/homeNetflix.png");
@@ -86,7 +93,7 @@
                     }
                 }
             }
-            &:nth-child(6) {
+            &:nth-child(7) {
                 .hoverContainer {
                     .imageProject {
                         background-image: url("../../../images/projects/ted/homeTed.png");

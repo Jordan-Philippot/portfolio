@@ -10,10 +10,6 @@ import Logo from "../../images/logo.png"
 export default function HeaderTablet() {
 
   const [nav, setNav] = useState(false);
-  // const [show, setShow] = useState(false)
-
-  // const [scrollTop, setScrollTop] = useState("")
-  // const [lastScrollTop, setLastScrollTop] = useState('')
 
 
   /* ----- Get The NavBar ----- */
@@ -37,37 +33,6 @@ export default function HeaderTablet() {
 
     }
   }, [nav])
-
-
-
-
-  /* ----- On every scroll this funtion will be called ----- */
-  // window.addEventListener('scroll', function () {
-
-  //   /* ----- This line will get the location on scroll ----- */
-  //   setScrollTop(window.pageYOffset || document.documentElement.scrollTop)
-
-
-  //   /* ----- If it will be greater than the previous ----- */
-  //   if (scrollTop > lastScrollTop) {
-  //     setShow(false)
-  //   } else {
-  //     setShow(true)
-  //   }
-
-  //   /* ----- New Position Stored ----- */
-  //   setLastScrollTop(scrollTop)
-  // });
-
-
-  // useEffect(() => {
-  //   if (show) {
-  //     gsap.fromTo(navbar, { top: '-100px', opacity: 0 }, { duration: 1, top: 0, opacity: 1, ease: 'ease-in-out' });
-  //   } else {
-  //     gsap.fromTo(navbar, { top: 0, opacity: 1 }, { duration: 1, top: '-100px', opacity: 0, ease: 'ease-in-out' });
-  //   }
-  //   // eslint-disable-next-line
-  // }, [show])
 
 
   return (

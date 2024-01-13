@@ -1,6 +1,46 @@
 export const myProjects = [
     {
         id: 1,
+        title: "Netflux comedy",
+        titleHover: "Projet personnel",
+        shortDescription: "Application React proposant une large gamme de vidéos de stand-up",
+        longDescription: "Netlux-comedy s'inspire des interface de Netflix et Youtube, et propose un large choix de vidéos de stand-up",
+        job: "Intégration | front-end | back-end | évolutionn",
+        tools: "React | Typescript | React-query | Symfony | Sass",
+        other: "Tâches cron | Listener | Webhook | Bucket AWS",
+        logo: require('../../images/projects/netflix/logoNetflix.png'),
+        link: "https://netflix-comedy.vercel.app",
+        github: "https://github.com/Jordan-Philippot/Netflix-comedy",
+        isMediaDesktop: true,
+        images: [
+            {
+                src: require('../../images/projects/neflux/modal-homepage.png'),
+                alt: "Modal video d'accueil",
+            },
+            {
+                src: require('../../images/projects/neflux/carousel.png'),
+                alt: "Carousel",
+            },
+            {
+                src: require('../../images/projects/neflux/channel.png'),
+                alt: "Page d'une chaine",
+            },
+            {
+                src: require('../../images/projects/neflux/search.png'),
+                alt: "Recherche sur page d'accueil",
+            },
+            {
+                src: require('../../images/projects/neflux/subscription.png'),
+                alt: "Page de souscription",
+            },
+            {
+                src: require('../../images/projects/neflux/login.png'),
+                alt: "Page de connexion",
+            },
+        ]
+    },
+    {
+        id: 2,
         title: "aliz",
         titleHover: "MarketPlace",
         shortDescription: "Start-up spécialisé dans l'automatisation de tâches pour TPE/PME et travailleurs indépendants",
@@ -41,7 +81,7 @@ export const myProjects = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         title: "alizCalendar",
         titleHover: "Produit Aliz",
         shortDescription: "Outils de gestion et prise de rendez-vous en ligne",
@@ -82,7 +122,7 @@ export const myProjects = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: "alizVerif",
         titleHover: "Produit Aliz",
         shortDescription: "Outils de recherche, vérification et nettoyage de données d'entreprises",
@@ -124,7 +164,7 @@ export const myProjects = [
 
     },
     {
-        id: 4,
+        id: 5,
         title: "studhelp",
         titleHover: "Projet de fin d'étude",
         shortDescription: "Application web permettant aux étudiants de rechercher les associations et évènements à proximité",
@@ -167,7 +207,7 @@ export const myProjects = [
 
     },
     {
-        id: 5,
+        id: 6,
         title: "my netflix",
         titleHover: "Découverte de React Native",
         shortDescription: "Application mobile servant à la recherche de séries, connecté à l'API Betaseries",
@@ -197,7 +237,7 @@ export const myProjects = [
 
     },
     {
-        id: 6,
+        id: 7,
         title: "ted",
         titleHover: "Start up française pure player DataViz et RPA",
         shortDescription: "Site vitrine, en cours de développement",
@@ -211,7 +251,6 @@ export const myProjects = [
         link: false,
         github: false,
         isMediaDesktop: true,
-
         images: [
             {
                 src: require('../../images/projects/ted/homeTed.png'),
