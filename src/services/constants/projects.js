@@ -1,10 +1,3 @@
-// import netfluxHome from "images/projects/neflux/modalhomepage.png";
-// import netfluxCarousel from "images/projects/neflux/carousel.png";
-// import netfluxChannel from "images/projects/neflux/channel.png";
-// import netfluxSearch from "images/projects/neflux/search.png";
-// import netfluxSubscription from "images/projects/neflux/subscription.png";
-// import netfluxLogin from "images/projects/neflux/login.png";
-
 export const myProjects = [
   {
     id: 1,
@@ -14,7 +7,7 @@ export const myProjects = [
       "Application React proposant une large gamme de vidéos de stand-up",
     longDescription:
       "Netlux-comedy s'inspire des interface de Netflix et Youtube, et propose un large choix de vidéos de stand-up",
-    job: "Intégration | front-end | back-end | évolutionn",
+    job: "Maquettage | Intégration | front-end | back-end",
     tools: "React | Typescript | React-query | Symfony | Sass",
     other: "Tâches cron | Listener | Webhook | Bucket AWS",
     logo: require("../../images/projects/netflix/logoNetflix.png"),
@@ -100,7 +93,7 @@ export const myProjects = [
     longDescription:
       "AlizCalendar est un produit Aliz permettant de gérer la prise de rendez-vous en ligne de manière personnalisé. " +
       "Les utilisateurs peuvent proposer des sondage en équipe, des webinars ou encore des rendez-vous récurrents",
-    job: "Maquette | Intégration | front-end | back-end ",
+    job: "Maquettage | Intégration | front-end | back-end ",
     tools: "Symfony | Twig | Figma",
     other: "Tâches cron | Listener | Webhook ",
     logo: require("../../images/projects/aliz/logoAliz.png"),
@@ -143,7 +136,7 @@ export const myProjects = [
     longDescription:
       "AlizVerif est un outil de recherche, vérification et nettoyage de données d'entreprises. " +
       "En quelques clics, vos données peuvent être vérifiées, notées et/ou nettoyées en les comparant à plusieurs bases de données fiables (API SIREN, BODACC etc...)",
-    job: "Maquette | Intégration | front-end",
+    job: "Maquettage | Intégration | front-end",
     tools: "React | Gsap | Figma",
     other: "Webhook | Axios",
     logo: require("../../images/projects/aliz/logoAliz.png"),
@@ -187,7 +180,7 @@ export const myProjects = [
       "Application web permettant aux étudiants de rechercher les associations et évènements à proximité. " +
       "Les utilisateurs peuvent également proposer leurs propre évènements et inviter les autres membres de la communauté. " +
       "Un salon à été mis en place pour facilié l'échange entre les utilisateurs. Données extraites d'une api .gouv.",
-    job: "Maquette | Intégration | front-end | back-end",
+    job: "Maquettage | Intégration | front-end | back-end",
     tools: "React | Gsap | Figma | socket.io",
     other: "Google Maps | filtre de recherche avancés | api .gouv | Axios",
     logo: require("../../images/projects/studhelp/logoStudhelp.png"),
@@ -230,7 +223,7 @@ export const myProjects = [
     longDescription:
       "Application mobile pour la recherche de séries, connecté à l'API Betaseries. " +
       "Un filtre de recherche par catégorie, titre et acteur est disponible, avec fiche descriptive de la série séléctionné. Projet d'étude développé sur 4 jours ",
-    job: "Maquette | Intégration | front-end | back-end",
+    job: "Maquettage | Intégration | front-end | back-end",
     tools: "ReactNative | Figma",
     other: "api betaseries | Axios",
     logo: require("../../images/projects/netflix/logoNetflix.png"),
